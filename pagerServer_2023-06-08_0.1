@@ -18,7 +18,7 @@ def transmit_pocsag(subject):
     if subject:
         # Remove any non-ASCII characters from the subject
         subject = ''.join(filter(lambda x: x in string.printable, subject))
-        subprocess.run(["sudo", "rpitx", "-m", "pocsag", "-f", "YOUR_FREQUENCY", "-t", subject])
+        subprocess.run(sudo echo -e "1016269:AWOOOOO" | sudo ./rpitx/pocsag -f "152175000" -r 512 -t 1)
 
 # Main program
 while True:
